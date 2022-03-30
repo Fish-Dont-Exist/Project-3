@@ -112,13 +112,13 @@ class BinaryNode<T>
          // Process the nodes in the left subtree
          if (this.hasLeftChild())
          {
-            this.leftChild.postorderTraverse_binaryNodeMethod();
+            this.getLeftChild().postorderTraverse_binaryNodeMethod();
          }
 
          // Process the nodes in the right subtree
          if (this.hasRightChild())
          {
-            this.rightChild.postorderTraverse_binaryNodeMethod();
+            this.getRightChild().postorderTraverse_binaryNodeMethod();
          }
 
          // Print out the subtree
@@ -137,8 +137,36 @@ class BinaryNode<T>
    @return  The height of the subtree rooted at "this" node. */
    public int getHeight_binaryNodeMethod()
    {
-      
-      return 0;
+      // Initialize height to 0
+      int height = 0;
+
+      // These two values will remain as 1 if they are leaves (recall that a tree with one node has a height of 1)
+      int leftChildHeight = 1;
+      int rightChildHeight = 1;
+
+      if (!this.isLeaf())
+      {
+         // Check to see if the node has a left child
+         if (this.hasLeftChild())
+         {
+            // If it has a left child, get the height of that child
+            leftChildHeight = this.getLeftChild().getHeight_binaryNodeMethod();
+         }
+
+         // Check if the node has a right child
+         if (this.hasRightChild())
+         {
+            // If it has a right child, get the height of that child
+            rightChildHeight = this.getRightChild().getHeight_binaryNodeMethod();
+         }
+
+         // Add one to the height
+         height = 1 + Math.max(leftChildHeight,
+                               rightChildHeight);
+      }
+
+
+      return height;
    } // end getHeight
    
    /** -------------------------------------------------------------------- */
