@@ -20,8 +20,8 @@ public class BinaryTree<T> implements BinaryTreeInterface<T>
    public void setTree(T rootData, BinaryTreeInterface<T> leftTree,
                                    BinaryTreeInterface<T> rightTree)
    {
-      initializeTree(rootData, (BinaryTree<T>)leftTree,
-                               (BinaryTree<T>)rightTree);
+      initializeTree(rootData, (BinaryTree<T>) leftTree,
+                               (BinaryTree<T>) rightTree);
    } // end setTree
 
    public void setRootData(T rootData)
@@ -92,7 +92,8 @@ public class BinaryTree<T> implements BinaryTreeInterface<T>
     * prints (using post-order traversal) all nodes in the "whole" tree */
    public void postorderTraverse()
    {
-      // Calls postorderTraverse(BinaryNode<T> node)
+      // Calls postorderTraverse(BinaryNode<T> node) on root
+      postorderTraverse(root);
    }
    
    /** A Recursive Method in the BinaryTree Class   
@@ -100,13 +101,20 @@ public class BinaryTree<T> implements BinaryTreeInterface<T>
    private void postorderTraverse(BinaryNode<T> node)
    {
       // recursive method performs postorder traversal of a subtree rooted at a given node
+      if (node != null)
+      {
+         postorderTraverse(node.getLeftChild());
+         postorderTraverse(node.getRightChild());
+         System.out.println(node.getData());
+      }
    }
  
    /** The following calls postorderTraverse_binaryNodeMethod(), which is a recursive binaryNode class method   
     * prints (using post-order traversal) all nodes in the "whole" tree */
    public void postorderTraverse_callBinaryNodeMethod()
    {
-
+      // Now, postorder traversal but using the binaryNode.java class
+      root.postorderTraverse_binaryNodeMethod();
    }
    
    /** -------------------------------------------------------------------- */
@@ -140,6 +148,8 @@ public class BinaryTree<T> implements BinaryTreeInterface<T>
    @return  The height of the "whole" tree. */
    public int getHeight_callBinaryNodeMethod()
    {
+       // Call the getHeight_binaryNodeMethod() to compute the height of the whole tree
+
 	   return 0;
    } // end getHeight_callBinaryNodeMethod
 
