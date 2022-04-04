@@ -6,13 +6,13 @@ public class BinaryTreeTest
     @Test
     public void postOrderBinaryTreeTraverseFullTree()
     {
-        BinaryTree binaryTree1 = new BinaryTree(1);
-        BinaryTree binaryTree2 = new BinaryTree(2);
-        BinaryTree binaryTree3 = new BinaryTree(3);
-        BinaryTree binaryTree4 = new BinaryTree(4);
-        BinaryTree binaryTree5 = new BinaryTree(5, binaryTree1, binaryTree3);
-        BinaryTree binaryTree6 = new BinaryTree(6, binaryTree2, binaryTree4);
-        BinaryTree binaryTree7 = new BinaryTree(7, binaryTree5, binaryTree6);
+        BinaryTree<Integer> binaryTree1 = new BinaryTree<>(1);
+        BinaryTree<Integer> binaryTree2 = new BinaryTree<>(2);
+        BinaryTree<Integer> binaryTree3 = new BinaryTree<>(3);
+        BinaryTree<Integer> binaryTree4 = new BinaryTree<>(4);
+        BinaryTree<Integer> binaryTree5 = new BinaryTree<>(5, binaryTree1, binaryTree3);
+        BinaryTree<Integer> binaryTree6 = new BinaryTree<>(6, binaryTree2, binaryTree4);
+        BinaryTree<Integer> binaryTree7 = new BinaryTree<>(7, binaryTree5, binaryTree6);
         /*                  7
                         5       6
                      1    3   2    4
@@ -24,12 +24,12 @@ public class BinaryTreeTest
     @Test
     public void postOrderBinaryTreeTraverseCompleteTree()
     {
-        BinaryTree binaryTree1 = new BinaryTree(1);
-        BinaryTree binaryTree2 = new BinaryTree(2);
-        BinaryTree binaryTree3 = new BinaryTree(3);
-        BinaryTree binaryTree5 = new BinaryTree(5, binaryTree1, binaryTree3);
-        BinaryTree binaryTree6 = new BinaryTree(6, binaryTree2, null);
-        BinaryTree binaryTree7 = new BinaryTree(7, binaryTree5, binaryTree6);
+        BinaryTree<Integer> binaryTree1 = new BinaryTree<>(1);
+        BinaryTree<Integer> binaryTree2 = new BinaryTree<>(2);
+        BinaryTree<Integer> binaryTree3 = new BinaryTree<>(3);
+        BinaryTree<Integer> binaryTree5 = new BinaryTree<>(5, binaryTree1, binaryTree3);
+        BinaryTree<Integer> binaryTree6 = new BinaryTree<>(6, binaryTree2, null);
+        BinaryTree<Integer> binaryTree7 = new BinaryTree<>(7, binaryTree5, binaryTree6);
         /*                  7
                         5       6
                      1    3   2
@@ -41,10 +41,10 @@ public class BinaryTreeTest
     @Test
     public void postOrderBinaryTreeTraverseNonBalancedTree()
     {
-        BinaryTree binaryTree1 = new BinaryTree(1);
-        BinaryTree binaryTree3 = new BinaryTree(3);
-        BinaryTree binaryTree5 = new BinaryTree(5, binaryTree1, binaryTree3);
-        BinaryTree binaryTree7 = new BinaryTree(7, binaryTree5, null);
+        BinaryTree<Integer> binaryTree1 = new BinaryTree<>(1);
+        BinaryTree<Integer> binaryTree3 = new BinaryTree<>(3);
+        BinaryTree<Integer> binaryTree5 = new BinaryTree<>(5, binaryTree1, binaryTree3);
+        BinaryTree<Integer> binaryTree7 = new BinaryTree<>(7, binaryTree5, null);
         /*                  7
                         5
                      1    3
@@ -56,7 +56,7 @@ public class BinaryTreeTest
     @Test
     public void postOrderBinaryTreeTraverseEmptyTree()
     {
-        BinaryTree binaryTree = new BinaryTree();
+        BinaryTree<Integer> binaryTree = new BinaryTree<>();
         binaryTree.postorderTraverse();
         // Output should be
     }
@@ -64,13 +64,13 @@ public class BinaryTreeTest
     @Test
     public void postOrderBinaryTreeWithBinaryNodeMethodTraverseFullTree()
     {
-        BinaryTree binaryTree1 = new BinaryTree(1);
-        BinaryTree binaryTree2 = new BinaryTree(2);
-        BinaryTree binaryTree3 = new BinaryTree(3);
-        BinaryTree binaryTree4 = new BinaryTree(4);
-        BinaryTree binaryTree5 = new BinaryTree(5, binaryTree1, binaryTree3);
-        BinaryTree binaryTree6 = new BinaryTree(6, binaryTree2, binaryTree4);
-        BinaryTree binaryTree7 = new BinaryTree(7, binaryTree5, binaryTree6);
+        BinaryTree<Integer> binaryTree1 = new BinaryTree<>(1);
+        BinaryTree<Integer> binaryTree2 = new BinaryTree<>(2);
+        BinaryTree<Integer> binaryTree3 = new BinaryTree<>(3);
+        BinaryTree<Integer> binaryTree4 = new BinaryTree<>(4);
+        BinaryTree<Integer> binaryTree5 = new BinaryTree<>(5, binaryTree1, binaryTree3);
+        BinaryTree<Integer> binaryTree6 = new BinaryTree<>(6, binaryTree2, binaryTree4);
+        BinaryTree<Integer> binaryTree7 = new BinaryTree<>(7, binaryTree5, binaryTree6);
         /*                  7
                         5       6
                      1    3   2    4
@@ -82,12 +82,12 @@ public class BinaryTreeTest
     @Test
     public void postOrderBinaryTreeWithBinaryNodeMethodTraverseCompleteTree()
     {
-        BinaryTree binaryTree1 = new BinaryTree(1);
-        BinaryTree binaryTree2 = new BinaryTree(2);
-        BinaryTree binaryTree3 = new BinaryTree(3);
-        BinaryTree binaryTree5 = new BinaryTree(5, binaryTree1, binaryTree3);
-        BinaryTree binaryTree6 = new BinaryTree(6, binaryTree2, null);
-        BinaryTree binaryTree7 = new BinaryTree(7, binaryTree5, binaryTree6);
+        BinaryTree<Integer> binaryTree1 = new BinaryTree<>(1);
+        BinaryTree<Integer> binaryTree2 = new BinaryTree<>(2);
+        BinaryTree<Integer> binaryTree3 = new BinaryTree<>(3);
+        BinaryTree<Integer> binaryTree5 = new BinaryTree<>(5, binaryTree1, binaryTree3);
+        BinaryTree<Integer> binaryTree6 = new BinaryTree<>(6, binaryTree2, null);
+        BinaryTree<Integer> binaryTree7 = new BinaryTree<>(7, binaryTree5, binaryTree6);
         /*                  7
                         5       6
                      1    3   2
@@ -99,10 +99,10 @@ public class BinaryTreeTest
     @Test
     public void postOrderBinaryTreeWithBinaryNodeMethodTraverseNonBalancedTree()
     {
-        BinaryTree binaryTree1 = new BinaryTree(1);
-        BinaryTree binaryTree3 = new BinaryTree(3);
-        BinaryTree binaryTree5 = new BinaryTree(5, binaryTree1, binaryTree3);
-        BinaryTree binaryTree7 = new BinaryTree(7, binaryTree5, null);
+        BinaryTree<Integer> binaryTree1 = new BinaryTree<>(1);
+        BinaryTree<Integer> binaryTree3 = new BinaryTree<>(3);
+        BinaryTree<Integer> binaryTree5 = new BinaryTree<>(5, binaryTree1, binaryTree3);
+        BinaryTree<Integer> binaryTree7 = new BinaryTree<>(7, binaryTree5, null);
         /*                  7
                         5
                      1    3
@@ -117,7 +117,7 @@ public class BinaryTreeTest
     @Test
     public void postOrderBinaryTreeWithBinaryNodeMethodTraverseEmptyTree()
     {
-        BinaryTree binaryTree = new BinaryTree();
+        BinaryTree<Integer> binaryTree = new BinaryTree<>();
         binaryTree.postorderTraverse_callBinaryNodeMethod();
         // Output should be
     }
@@ -128,13 +128,13 @@ public class BinaryTreeTest
     @Test
     public void postOrderBinaryTreeGetHeightFullTree()
     {
-        BinaryTree binaryTree1 = new BinaryTree(1);
-        BinaryTree binaryTree2 = new BinaryTree(2);
-        BinaryTree binaryTree3 = new BinaryTree(3);
-        BinaryTree binaryTree4 = new BinaryTree(4);
-        BinaryTree binaryTree5 = new BinaryTree(5, binaryTree1, binaryTree3);
-        BinaryTree binaryTree6 = new BinaryTree(6, binaryTree2, binaryTree4);
-        BinaryTree binaryTree7 = new BinaryTree(7, binaryTree5, binaryTree6);
+        BinaryTree<Integer> binaryTree1 = new BinaryTree<>(1);
+        BinaryTree<Integer> binaryTree2 = new BinaryTree<>(2);
+        BinaryTree<Integer> binaryTree3 = new BinaryTree<>(3);
+        BinaryTree<Integer> binaryTree4 = new BinaryTree<>(4);
+        BinaryTree<Integer> binaryTree5 = new BinaryTree<>(5, binaryTree1, binaryTree3);
+        BinaryTree<Integer> binaryTree6 = new BinaryTree<>(6, binaryTree2, binaryTree4);
+        BinaryTree<Integer> binaryTree7 = new BinaryTree<>(7, binaryTree5, binaryTree6);
         /*                  7
                         5       6
                      1    3   2    4
@@ -146,12 +146,12 @@ public class BinaryTreeTest
     @Test
     public void postOrderBinaryTreeGetHeightCompleteTree()
     {
-        BinaryTree binaryTree1 = new BinaryTree(1);
-        BinaryTree binaryTree2 = new BinaryTree(2);
-        BinaryTree binaryTree3 = new BinaryTree(3);
-        BinaryTree binaryTree5 = new BinaryTree(5, binaryTree1, binaryTree3);
-        BinaryTree binaryTree6 = new BinaryTree(6, binaryTree2, null);
-        BinaryTree binaryTree7 = new BinaryTree(7, binaryTree5, binaryTree6);
+        BinaryTree<Integer> binaryTree1 = new BinaryTree<>(1);
+        BinaryTree<Integer> binaryTree2 = new BinaryTree<>(2);
+        BinaryTree<Integer> binaryTree3 = new BinaryTree<>(3);
+        BinaryTree<Integer> binaryTree5 = new BinaryTree<>(5, binaryTree1, binaryTree3);
+        BinaryTree<Integer> binaryTree6 = new BinaryTree<>(6, binaryTree2, null);
+        BinaryTree<Integer> binaryTree7 = new BinaryTree<>(7, binaryTree5, binaryTree6);
         /*                  7
                         5       6
                      1    3   2
@@ -166,10 +166,10 @@ public class BinaryTreeTest
     @Test
     public void postOrderBinaryTreeGetHeightNonBalancedTree()
     {
-        BinaryTree binaryTree1 = new BinaryTree(1);
-        BinaryTree binaryTree3 = new BinaryTree(3);
-        BinaryTree binaryTree5 = new BinaryTree(5, binaryTree1, binaryTree3);
-        BinaryTree binaryTree7 = new BinaryTree(7, binaryTree5, null);
+        BinaryTree<Integer> binaryTree1 = new BinaryTree<>(1);
+        BinaryTree<Integer> binaryTree3 = new BinaryTree<>(3);
+        BinaryTree<Integer> binaryTree5 = new BinaryTree<>(5, binaryTree1, binaryTree3);
+        BinaryTree<Integer> binaryTree7 = new BinaryTree<>(7, binaryTree5, null);
         /*                  7
                         5
                      1    3
@@ -184,7 +184,7 @@ public class BinaryTreeTest
     @Test
     public void postOrderBinaryTreeGetHeightEmptyTree()
     {
-        BinaryTree binaryTree = new BinaryTree();
+        BinaryTree<Integer> binaryTree = new BinaryTree<>();
         int height = binaryTree.getHeight_callBinaryNodeMethod();
         assertEquals(0,height);
     }
