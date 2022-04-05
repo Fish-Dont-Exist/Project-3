@@ -1,5 +1,6 @@
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertThrows;
 
 public class BinaryTreeTest
 {
@@ -118,8 +119,13 @@ public class BinaryTreeTest
     public void postOrderBinaryTreeWithBinaryNodeMethodTraverseEmptyTree()
     {
         BinaryTree<Integer> binaryTree = new BinaryTree<>();
-        binaryTree.postorderTraverse_callBinaryNodeMethod();
-        // Output should be
+//        binaryTree.postorderTraverse_callBinaryNodeMethod();
+
+        // Output should throw an exception
+        assertThrows(EmptyTreeException.class, () -> {
+            binaryTree.postorderTraverse_callBinaryNodeMethod();
+        });
+
     }
 
     /**
