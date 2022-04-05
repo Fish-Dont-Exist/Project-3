@@ -137,8 +137,8 @@ class BinaryNode<T>
    @return  The height of the subtree rooted at "this" node. */
    public int getHeight_binaryNodeMethod()
    {
-      // Initialize height to 0
-      int height = 0;
+      // Initialize height to 1
+      int height = 1;
 
       // These two values will remain as 1 if they are leaves (recall that a tree with one node has a height of 1)
       int leftChildHeight = 1;
