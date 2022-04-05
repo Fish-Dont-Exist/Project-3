@@ -112,7 +112,7 @@ public class BinaryTreeTest
     }
 
     /**
-     * Note: This results in a NullPointerException currently, needs fixing soon
+     * Note: Throws EmptyTreeException
      */
     @Test
     public void postOrderBinaryTreeWithBinaryNodeMethodTraverseEmptyTree()
@@ -123,7 +123,7 @@ public class BinaryTreeTest
     }
 
     /**
-     * Note: This gives 2 instead of 3, maybe I tested wrong?
+     * Note: Output should be 3
      */
     @Test
     public void postOrderBinaryTreeGetHeightFullTree()
@@ -161,7 +161,7 @@ public class BinaryTreeTest
     }
 
     /**
-     * Test fails here as well???
+     * Output should be 3
      */
     @Test
     public void postOrderBinaryTreeGetHeightNonBalancedTree()

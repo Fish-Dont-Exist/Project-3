@@ -114,6 +114,10 @@ public class BinaryTree<T> implements BinaryTreeInterface<T>
    public void postorderTraverse_callBinaryNodeMethod()
    {
       // Now, postorder traversal but using the binaryNode.java class
+      if(isEmpty())
+      {
+	throw new EmptyTreeException();
+      }
       root.postorderTraverse_binaryNodeMethod();
    }
    
@@ -134,7 +138,7 @@ public class BinaryTree<T> implements BinaryTreeInterface<T>
    /** A Recursive Method in the BinaryTree Class  
     * Computes the height of the subtree rooted at this node.
    @return  The height of the subtree rooted at this node. */
-   private int getHeight(BinaryNode<T> node)
+   private int getHeight(BinaryNode<T> node) 
    {
       int height = 0;
       if (node != null)
@@ -149,6 +153,8 @@ public class BinaryTree<T> implements BinaryTreeInterface<T>
    public int getHeight_callBinaryNodeMethod()
    {
       // Call the getHeight_binaryNodeMethod() to compute the height of the whole tree (call on root of tree)
+      if (isEmpty())
+         return 0;
       int heightOfTree = root.getHeight_binaryNodeMethod();
 
 	   return heightOfTree;

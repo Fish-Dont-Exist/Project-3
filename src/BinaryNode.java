@@ -165,7 +165,7 @@ class BinaryNode<T>
                                rightChildHeight);
       }
 
-
+      
       return height;
    } // end getHeight
    
