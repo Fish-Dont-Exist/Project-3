@@ -17,6 +17,92 @@ public class BinaryTree<T> implements BinaryTreeInterface<T>
       initializeTree(rootData, leftTree, rightTree);
    } // end constructor
 
+   public BinaryTree(String preOrder, String inOrder)
+   {
+      createTree(preOrder, inOrder);
+   }
+
+   /**
+    * Private helper method that recursively calls itself. Takes preorder and inorder traversal strings for a binary
+    * tree and builds it.
+    * @param preorder String of the preorder traversal
+    * @param inorder  String of the inorder traversal
+    * @return The binary tree of letters.
+    */
+   @SuppressWarnings("unchecked")
+   private BinaryNode<T> createTree(String preorder, String inorder)
+   {
+
+      // Base case
+      if (inorder.length() == 1) // if its a leaf
+      {
+         // Get the left and right trees
+         BinaryNode<T> leftTree = null;
+         BinaryNode<T> rightTree = null;
+
+         // Get the node data
+         String [] preorderArray = preorder.split("");
+         String rootData = preorderArray[0];
+
+         // return the leaf node
+         BinaryNode<T> leaf = new BinaryNode<>( (T) rootData, leftTree, rightTree);
+
+         return leaf;
+      }
+      else if (inorder.length() < 1) // if it only has one child
+      {
+         return null;
+      }
+      else
+      {
+         // Initialize the root and character index
+         char rootChar = preorder.charAt(0);
+         int rootIndex = 0;
+
+         // Convert the strings to an array of letters
+         String[] splitInorder = inorder.split("");
+         String[] splitPreorder = preorder.split("");
+
+         // find the index of the root in the splitInorder array
+         while (!splitInorder[rootIndex].equalsIgnoreCase(String.valueOf(rootChar))) { rootIndex ++; }
+
+         // Split the inorder string into left and right strings
+         String lInorder = "";
+         String rInorder = "";
+
+         for (int i = 0; i < rootIndex; i++) { lInorder += splitInorder[i]; }
+
+         for (int i = rootIndex + 1; i < splitInorder.length; i++ ) {rInorder += splitInorder[i];}
+
+
+         // Split the preOrder string into left and right strings
+         String lPreOrder = "";
+         String rPreOrder = "";
+
+         for (int i = 1; i < rootIndex + 1; i++)
+         {
+            lPreOrder += splitPreorder[i];
+         }
+
+         for (int i = rootIndex + 1; i < splitPreorder.length; i++)
+         {
+            rPreOrder += splitPreorder[i];
+         }
+
+
+         // Get the left tree, right tree and rootdata
+         BinaryNode<T> leftTree = createTree(lPreOrder, lInorder);
+         BinaryNode<T> rightTree = createTree(rPreOrder, rInorder);
+         String rootData = splitPreorder[0];
+
+         root = new BinaryNode<>( (T) rootData, leftTree, rightTree);
+      }
+
+      // Return the root
+      return root;
+   }
+
+
    public void setTree(T rootData, BinaryTreeInterface<T> leftTree,
                                    BinaryTreeInterface<T> rightTree)
    {
@@ -215,5 +301,5 @@ public class BinaryTree<T> implements BinaryTreeInterface<T>
 		   numberOfNodes = root.getNumberOfNodes_binaryNodeMethod();
 	   return numberOfNodes;
    } // end getNumberOfNodes_callBinaryNodeMethod
-   
+
 } // end BinaryTree

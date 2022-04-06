@@ -185,7 +185,7 @@ public class BinaryTreeTest
     }
 
     /**
-     * NullPointerException thrown
+     * Should be equal to 0
      */
     @Test
     public void postOrderBinaryTreeGetHeightEmptyTree()
@@ -195,5 +195,16 @@ public class BinaryTreeTest
         assertEquals(0,height);
     }
 
-    
+    /**
+     * Should be equal
+     */
+    @Test
+    public void createNewBinaryTreeFromString()
+    {
+        BinaryTree<String> apple = new BinaryTree<>();
+
+        apple.newBinaryTree("ABC", "BAC");
+    }
+
+
 }
