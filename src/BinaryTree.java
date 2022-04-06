@@ -183,6 +183,8 @@ public class BinaryTree<T> implements BinaryTreeInterface<T>
       //    in the left branch and then the number of nodes in the right branch. This is recursive, so while the node
       //    is not null we will recursively look at the children of the node.
 
+      if (isEmpty())
+         return 0;
       // Initialize the number of left and right nodes
       int numberOfLeftNodes = 0;
       int numberOfRightNodes = 0;
