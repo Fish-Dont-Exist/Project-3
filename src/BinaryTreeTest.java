@@ -2,11 +2,9 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThrows;
 
-public class BinaryTreeTest
-{
+public class BinaryTreeTest {
     @Test
-    public void postOrderBinaryTreeTraverseFullTree()
-    {
+    public void postOrderBinaryTreeTraverseFullTree() {
         BinaryTree<Integer> binaryTree1 = new BinaryTree<>(1);
         BinaryTree<Integer> binaryTree2 = new BinaryTree<>(2);
         BinaryTree<Integer> binaryTree3 = new BinaryTree<>(3);
@@ -28,8 +26,7 @@ public class BinaryTreeTest
     }
 
     @Test
-    public void postOrderBinaryTreeTraverseCompleteTree()
-    {
+    public void postOrderBinaryTreeTraverseCompleteTree() {
         BinaryTree<Integer> binaryTree1 = new BinaryTree<>(1);
         BinaryTree<Integer> binaryTree2 = new BinaryTree<>(2);
         BinaryTree<Integer> binaryTree3 = new BinaryTree<>(3);
@@ -50,8 +47,7 @@ public class BinaryTreeTest
     }
 
     @Test
-    public void postOrderBinaryTreeTraverseNonBalancedTree()
-    {
+    public void postOrderBinaryTreeTraverseNonBalancedTree() {
         BinaryTree<Integer> binaryTree1 = new BinaryTree<>(1);
         BinaryTree<Integer> binaryTree3 = new BinaryTree<>(3);
         BinaryTree<Integer> binaryTree5 = new BinaryTree<>(5, binaryTree1, binaryTree3);
@@ -70,8 +66,7 @@ public class BinaryTreeTest
     }
 
     @Test
-    public void postOrderBinaryTreeTraverseEmptyTree()
-    {
+    public void postOrderBinaryTreeTraverseEmptyTree() {
         BinaryTree<Integer> binaryTree = new BinaryTree<>();
         binaryTree.postorderTraverse();
 
@@ -84,8 +79,7 @@ public class BinaryTreeTest
     }
 
     @Test
-    public void postOrderBinaryTreeWithBinaryNodeMethodTraverseFullTree()
-    {
+    public void postOrderBinaryTreeWithBinaryNodeMethodTraverseFullTree() {
         BinaryTree<Integer> binaryTree1 = new BinaryTree<>(1);
         BinaryTree<Integer> binaryTree2 = new BinaryTree<>(2);
         BinaryTree<Integer> binaryTree3 = new BinaryTree<>(3);
@@ -107,8 +101,7 @@ public class BinaryTreeTest
     }
 
     @Test
-    public void postOrderBinaryTreeWithBinaryNodeMethodTraverseCompleteTree()
-    {
+    public void postOrderBinaryTreeWithBinaryNodeMethodTraverseCompleteTree() {
         BinaryTree<Integer> binaryTree1 = new BinaryTree<>(1);
         BinaryTree<Integer> binaryTree2 = new BinaryTree<>(2);
         BinaryTree<Integer> binaryTree3 = new BinaryTree<>(3);
@@ -128,8 +121,7 @@ public class BinaryTreeTest
     }
 
     @Test
-    public void postOrderBinaryTreeWithBinaryNodeMethodTraverseNonBalancedTree()
-    {
+    public void postOrderBinaryTreeWithBinaryNodeMethodTraverseNonBalancedTree() {
         BinaryTree<Integer> binaryTree1 = new BinaryTree<>(1);
         BinaryTree<Integer> binaryTree3 = new BinaryTree<>(3);
         BinaryTree<Integer> binaryTree5 = new BinaryTree<>(5, binaryTree1, binaryTree3);
@@ -151,8 +143,7 @@ public class BinaryTreeTest
      * Note: Throws EmptyTreeException
      */
     @Test
-    public void postOrderBinaryTreeWithBinaryNodeMethodTraverseEmptyTree()
-    {
+    public void postOrderBinaryTreeWithBinaryNodeMethodTraverseEmptyTree() {
         BinaryTree<Integer> binaryTree = new BinaryTree<>();
 //        binaryTree.postorderTraverse_callBinaryNodeMethod();
 
@@ -165,8 +156,7 @@ public class BinaryTreeTest
 
 
     @Test
-    public void postOrderBinaryTreeGetHeightFullTree()
-    {
+    public void postOrderBinaryTreeGetHeightFullTree() {
         BinaryTree<Integer> binaryTree1 = new BinaryTree<>(1);
         BinaryTree<Integer> binaryTree2 = new BinaryTree<>(2);
         BinaryTree<Integer> binaryTree3 = new BinaryTree<>(3);
@@ -183,8 +173,7 @@ public class BinaryTreeTest
     }
 
     @Test
-    public void postOrderBinaryTreeGetHeightCompleteTree()
-    {
+    public void postOrderBinaryTreeGetHeightCompleteTree() {
         BinaryTree<Integer> binaryTree1 = new BinaryTree<>(1);
         BinaryTree<Integer> binaryTree2 = new BinaryTree<>(2);
         BinaryTree<Integer> binaryTree3 = new BinaryTree<>(3);
@@ -201,8 +190,7 @@ public class BinaryTreeTest
 
 
     @Test
-    public void postOrderBinaryTreeGetHeightNonBalancedTree()
-    {
+    public void postOrderBinaryTreeGetHeightNonBalancedTree() {
         BinaryTree<Integer> binaryTree1 = new BinaryTree<>(1);
         BinaryTree<Integer> binaryTree3 = new BinaryTree<>(3);
         BinaryTree<Integer> binaryTree5 = new BinaryTree<>(5, binaryTree1, binaryTree3);
@@ -220,27 +208,24 @@ public class BinaryTreeTest
      */
 
     @Test
-    public void postOrderBinaryTreeGetHeightEmptyTree()
-    {
+    public void postOrderBinaryTreeGetHeightEmptyTree() {
         BinaryTree<Integer> binaryTree = new BinaryTree<>();
         int height = binaryTree.getHeight_callBinaryNodeMethod();
-        assertEquals(0,height);
+        assertEquals(0, height);
     }
 
     /**
      * Should be equal
      */
     @Test
-    public void createNewBinaryTreeFromString()
-    {
+    public void createNewBinaryTreeFromString() {
         BinaryTree<String> apple = new BinaryTree<>("ABC", "BAC");
         apple.postorderTraverse();
     }
 
 
     @Test
-    public void postOrderBinaryTreeGetNodesFullTree()
-    {
+    public void postOrderBinaryTreeGetNodesFullTree() {
         BinaryTree<Integer> binaryTree1 = new BinaryTree<>(1);
         BinaryTree<Integer> binaryTree2 = new BinaryTree<>(2);
         BinaryTree<Integer> binaryTree3 = new BinaryTree<>(3);
@@ -257,8 +242,7 @@ public class BinaryTreeTest
     }
 
     @Test
-    public void postOrderBinaryTreeGetNodesCompleteTree()
-    {
+    public void postOrderBinaryTreeGetNodesCompleteTree() {
         BinaryTree<Integer> binaryTree1 = new BinaryTree<>(1);
         BinaryTree<Integer> binaryTree2 = new BinaryTree<>(2);
         BinaryTree<Integer> binaryTree3 = new BinaryTree<>(3);
@@ -274,8 +258,7 @@ public class BinaryTreeTest
     }
 
     @Test
-    public void postOrderBinaryTreeGetNodesNonBalancedTree()
-    {
+    public void postOrderBinaryTreeGetNodesNonBalancedTree() {
         BinaryTree<Integer> binaryTree1 = new BinaryTree<>(1);
         BinaryTree<Integer> binaryTree3 = new BinaryTree<>(3);
         BinaryTree<Integer> binaryTree5 = new BinaryTree<>(5, binaryTree1, binaryTree3);
@@ -289,16 +272,14 @@ public class BinaryTreeTest
     }
 
     @Test
-    public void postOrderBinaryTreeGetNodesEmptyTree()
-    {
+    public void postOrderBinaryTreeGetNodesEmptyTree() {
         BinaryTree<Integer> binaryTree = new BinaryTree<>();
         int nodes = binaryTree.getNumberOfNodes();
-        assertEquals(0,nodes);
+        assertEquals(0, nodes);
     }
 
     @Test
-    public void postOrderBinaryTreeWithBinaryNodeMethodGetNodesFullTree()
-    {
+    public void postOrderBinaryTreeWithBinaryNodeMethodGetNodesFullTree() {
         BinaryTree<Integer> binaryTree1 = new BinaryTree<>(1);
         BinaryTree<Integer> binaryTree2 = new BinaryTree<>(2);
         BinaryTree<Integer> binaryTree3 = new BinaryTree<>(3);
@@ -315,8 +296,7 @@ public class BinaryTreeTest
     }
 
     @Test
-    public void postOrderBinaryTreeWithBinaryNodeMethodGetNodesCompleteTree()
-    {
+    public void postOrderBinaryTreeWithBinaryNodeMethodGetNodesCompleteTree() {
         BinaryTree<Integer> binaryTree1 = new BinaryTree<>(1);
         BinaryTree<Integer> binaryTree2 = new BinaryTree<>(2);
         BinaryTree<Integer> binaryTree3 = new BinaryTree<>(3);
@@ -332,8 +312,7 @@ public class BinaryTreeTest
     }
 
     @Test
-    public void postOrderBinaryTreeWithBinaryNodeMethodGetNodesNonBalancedTree()
-    {
+    public void postOrderBinaryTreeWithBinaryNodeMethodGetNodesNonBalancedTree() {
         BinaryTree<Integer> binaryTree1 = new BinaryTree<>(1);
         BinaryTree<Integer> binaryTree3 = new BinaryTree<>(3);
         BinaryTree<Integer> binaryTree5 = new BinaryTree<>(5, binaryTree1, binaryTree3);
@@ -347,11 +326,59 @@ public class BinaryTreeTest
     }
 
     @Test
-    public void postOrderBinaryTreeWithBinaryNodeMethodGetNodesEmptyTree()
-    {
+    public void postOrderBinaryTreeWithBinaryNodeMethodGetNodesEmptyTree() {
         BinaryTree<Integer> binaryTree = new BinaryTree<>();
         int nodes = binaryTree.getNumberOfNodes_callBinaryNodeMethod();
-        assertEquals(0,nodes);
+        assertEquals(0, nodes);
     }
-//>>>>>>> 36437011afc34f8da585c212a788ca2245e9dd87
+
+    @Test
+    public void createBinaryTreeWithPreorderAndInorderStrings() {
+        // First create the binary tree using two strings
+        BinaryTree<String> binaryTree = new BinaryTree("ABC", "BAC");
+
+        // Check if the postorders match
+        String postString = binaryTree.postorderTraverse_test();
+
+        // Assert the equals
+        assertEquals("BCA", postString);
+    }
+
+    @Test
+    public void createFullBinaryTreeWithPreorderAndInorderStrings() {
+        // Create the binary tree using two strings
+        BinaryTree<String> binaryTree = new BinaryTree<>("ABDECFG", "DBEAFCG");
+
+        // Check if the postorders match
+        String postString = binaryTree.postorderTraverse_test();
+
+        // Assert the equals
+        assertEquals("DEBFGCA", postString);
+    }
+
+    @Test
+    public void createCompleteBinaryTreeWithPreorderAndInorderStrings()
+    {
+        // Create the binary tree using two strings
+        BinaryTree<String> binaryTree = new BinaryTree<>("HIKOPLQJMN", "OKPIQLHMJN");
+
+        // Check if the postorders match
+        String postString = binaryTree.postorderTraverse_test();
+
+        // Assert the equals
+        assertEquals("OPKQLIMNJH", postString);
+    }
+
+    @Test
+    public void createBinaryTreeThatIsNotCompleteNorFullWithPreorderAndInorderStrings()
+    {
+        // Create binary tree using two strings
+        BinaryTree<String> binaryTree = new BinaryTree<>("RSUXTVWY", "XUSRVTYW");
+
+        // Check if the postorders match
+        String postString = binaryTree.postorderTraverse_test();
+
+        // Assert the equals
+        assertEquals("XUSVYWTR", postString);
+    }
 }
