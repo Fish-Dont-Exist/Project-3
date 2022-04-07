@@ -174,6 +174,9 @@ class BinaryNode<T>
    @return  The height of the subtree rooted at "this" node. */
    public int getHeight_binaryNodeMethod()
    {
+      // Check if node is null
+      if (this.data == null) {return 0;}
+
       // Initialize height to 1
       int height = 1;
 
@@ -212,6 +215,9 @@ class BinaryNode<T>
    @return  The number of nodes in the subtree rooted at "this" node. */
 	public int getNumberOfNodes_binaryNodeMethod()
 	{
+       // Sanitize input
+       if (this.data == null) { return 0; }
+
 	  int leftNumber = 0;
 	  int rightNumber = 0;
 	  if (leftChild != null)
