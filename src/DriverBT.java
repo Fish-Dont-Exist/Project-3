@@ -1,4 +1,4 @@
-public class DriverBT 
+public class DriverBT
 {
 	public static void main(String[] args)
 	{
@@ -48,13 +48,35 @@ public class DriverBT
 		System.out.println("Done.");
 
 		// Try out extra credit work
+
 //		BinaryTree<String> check1 = new BinaryTree("ABDEC", "DBEAC");
 //		System.out.println("post-order: ");
 //		check1.postorderTraverse();
 
 
-		BinaryTree<String> checking =  newBinaryTree("ABDEC", "DBEAC");
-		checking.postorderTraverse();
+
+
+		System.out.println("Starting Extra credit testing: ");
+		System.out.println("For preorder: ABC and inorder: BAC, we get postorder: ");
+		BinaryTree<String> test1 = new BinaryTree("ABC", "BAC");
+		test1.postorderTraverse();
+
+		System.out.println("\n");
+		System.out.println("For preorder: ABC and inorder: BAC, we get postorder: ");
+		BinaryTree<String> test2 = new BinaryTree("ABDEC", "DBEAC");
+		test2.postorderTraverse();
+
+		System.out.println("\n");
+		System.out.println("For preorder: ABC and inorder: BAC, we get postorder: ");
+		BinaryTree<String> test3 = new BinaryTree("ABCDE", "BADCE");
+		test3.postorderTraverse();
+
+		System.out.println("\n");
+		System.out.println("For preorder: ABC and inorder: BAC, we get postorder: ");
+		BinaryTree<String> test4 = new BinaryTree<>("ABDC", "DBAC");
+		test4.postorderTraverse();
+
+
 
 	}  // end main
 
@@ -122,78 +144,78 @@ public class DriverBT
 	 * Extra Credit: Take in two strings ( a preordertraversal string and an InOrderTraversal String) and create a
 	 * binary tree from taking in the two strings
 	 */
-	public static BinaryTree<String> newBinaryTree(String preOrder, String inOrder)
-	{
-//		// Recursive method will call itself
-//		// 1st. Find the root in the in-order string
-
+//	public static BinaryTree<String> newBinaryTree(String preOrder, String inOrder)
+//	{
+////		// Recursive method will call itself
+////		// 1st. Find the root in the in-order string
 //
-//		// 2nd. Split the in-order and pre-order strings into left and right strings
+////
+////		// 2nd. Split the in-order and pre-order strings into left and right strings
+////
+////
+////		// 3rd. Call the method newBinaryTree on the left and right string
 //
 //
-//		// 3rd. Call the method newBinaryTree on the left and right string
-
-
-		// Second attempt
-		BinaryTree<String> tree = new BinaryTree<>();
-
-		// Initialize the root character and index
-		char rootChar =  preOrder.charAt(0);
-		int rootIndex = 0;
-
-		// Convert the strings to an array of letters
-		String [] splitInOrder = inOrder.split("");
-		String [] splitPreOrder = preOrder.split("");
-
-		// Find the index of the root in the splitInOrder array
-		while (!splitInOrder[rootIndex].equalsIgnoreCase(String.valueOf(rootChar)))
-		{
-			rootIndex ++;
-		}
-
-		// Split the inOrder string into left and right strings
-		String lInOrder = "";
-		String rInOrder = "";
-
-
-		for (int i = 0; i < rootIndex; i++)
-		{
-			lInOrder += splitInOrder[i];
-
-		}
-
-		for (int i = rootIndex + 1; i < splitInOrder.length; i++ )
-		{
-			rInOrder += splitInOrder[i];
-		}
-
-
-		// Split the preOrder string into left and right strings
-		String lPreOrder = "";
-		String rPreOrder = "";
-
-		for (int i = 1; i < rootIndex + 1; i++)
-		{
-			lPreOrder += splitPreOrder[i];
-		}
-
-		for (int i = rootIndex + 1; i < splitPreOrder.length; i++)
-		{
-			rPreOrder += splitPreOrder[i];
-		}
-
-
-
-		// Create the binary tree
-		if (inOrder.length() == 1)  // i.e., if it is a leaf
-		{
-			tree.setTree(splitInOrder[rootIndex], null, null);
-		}
-		else // if it has children
-		{
-			tree.setTree(splitInOrder[rootIndex], newBinaryTree(lPreOrder, lInOrder), newBinaryTree(rPreOrder, rInOrder));
-		}
-
-		return tree;
-	}
+//		// Second attempt
+//		BinaryTree<String> tree = new BinaryTree<>();
+//
+//		// Initialize the root character and index
+//		char rootChar =  preOrder.charAt(0);
+//		int rootIndex = 0;
+//
+//		// Convert the strings to an array of letters
+//		String [] splitInOrder = inOrder.split("");
+//		String [] splitPreOrder = preOrder.split("");
+//
+//		// Find the index of the root in the splitInOrder array
+//		while (!splitInOrder[rootIndex].equalsIgnoreCase(String.valueOf(rootChar)))
+//		{
+//			rootIndex ++;
+//		}
+//
+//		// Split the inOrder string into left and right strings
+//		String lInOrder = "";
+//		String rInOrder = "";
+//
+//
+//		for (int i = 0; i < rootIndex; i++)
+//		{
+//			lInOrder += splitInOrder[i];
+//
+//		}
+//
+//		for (int i = rootIndex + 1; i < splitInOrder.length; i++ )
+//		{
+//			rInOrder += splitInOrder[i];
+//		}
+//
+//
+//		// Split the preOrder string into left and right strings
+//		String lPreOrder = "";
+//		String rPreOrder = "";
+//
+//		for (int i = 1; i < rootIndex + 1; i++)
+//		{
+//			lPreOrder += splitPreOrder[i];
+//		}
+//
+//		for (int i = rootIndex + 1; i < splitPreOrder.length; i++)
+//		{
+//			rPreOrder += splitPreOrder[i];
+//		}
+//
+//
+//
+//		// Create the binary tree
+//		if (inOrder.length() == 1)  // i.e., if it is a leaf
+//		{
+//			tree.setTree(splitInOrder[rootIndex], null, null);
+//		}
+//		else // if it has children
+//		{
+//			tree.setTree(splitInOrder[rootIndex], newBinaryTree(lPreOrder, lInOrder), newBinaryTree(rPreOrder, rInOrder));
+//		}
+//
+//		return tree;
+//	}
 }  // end DriverBT

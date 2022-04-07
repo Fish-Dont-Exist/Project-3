@@ -180,6 +180,9 @@ public class BinaryTreeTest
         assertEquals(3, height);
     }
 
+    /**
+     * Should be equal to 0
+     */
 
     @Test
     public void postOrderBinaryTreeGetHeightEmptyTree()
@@ -188,6 +191,17 @@ public class BinaryTreeTest
         int height = binaryTree.getHeight_callBinaryNodeMethod();
         assertEquals(0,height);
     }
+
+    /**
+     * Should be equal
+     */
+    @Test
+    public void createNewBinaryTreeFromString()
+    {
+        BinaryTree<String> apple = new BinaryTree<>("ABC", "BAC");
+        apple.postorderTraverse();
+    }
+
 
     @Test
     public void postOrderBinaryTreeGetNodesFullTree()
@@ -304,4 +318,5 @@ public class BinaryTreeTest
         int nodes = binaryTree.getNumberOfNodes_callBinaryNodeMethod();
         assertEquals(0,nodes);
     }
+//>>>>>>> 36437011afc34f8da585c212a788ca2245e9dd87
 }
