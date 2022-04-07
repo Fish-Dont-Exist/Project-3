@@ -7,7 +7,7 @@ Jesse Chu
 2. Contributions:  
 Alan Perez - Tasks 1 - 4; Unit Testing; Extra Credit;  
 Benjamin Dinh - Worked on the unit testing and debugged some of the methods.  
-Jesse Chu -   
+Jesse Chu -  Javadocs website creation & Unit Testing
 
 3.  
 Javadoc Link: https://fish-dont-exist.github.io/Project-3/BinaryTree.html  
