@@ -40,7 +40,12 @@ public class BinaryTreeTest
                         5       6
                      1    3   2
         */
-        binaryTree7.postorderTraverse();
+
+        // Create string of postorder traversal
+        String postString = binaryTree7.postorderTraverse_test();
+
+        // Assert the equals
+        assertEquals("135267", postString);
         // Output should be 1, 3, 5, 2, 6, 7
     }
 
@@ -55,7 +60,14 @@ public class BinaryTreeTest
                         5
                      1    3
         */
-        binaryTree7.postorderTraverse();
+
+        // Create string of postorder traversal
+        String postString = binaryTree7.postorderTraverse_test();
+
+        // Assert the equals
+        assertEquals("1357", postString);
+
+//        binaryTree7.postorderTraverse();
         // Output should be 1, 3, 5, 7
     }
 
@@ -64,6 +76,12 @@ public class BinaryTreeTest
     {
         BinaryTree<Integer> binaryTree = new BinaryTree<>();
         binaryTree.postorderTraverse();
+
+        // Create string of postorder traversal
+        String postString = binaryTree.postorderTraverse_test();
+
+        // Assert the equals
+        assertEquals("", postString);
         // Output should be
     }
 
@@ -81,7 +99,13 @@ public class BinaryTreeTest
                         5       6
                      1    3   2    4
         */
-        binaryTree7.postorderTraverse_callBinaryNodeMethod();
+        
+
+        // Create string of postorder traversal
+        String postString = binaryTree7.postorderTraverse_callBinaryNodeMethod_test();
+
+        // Assert the equals
+        assertEquals("1352467", postString);
         // Output should be 1, 3, 5, 2, 4, 6, 7
     }
 

@@ -231,14 +231,14 @@ public class BinaryTree<T> implements BinaryTreeInterface<T>
    }
 
 
-   protected void postorderTraverse_callBinaryNodeMethod_test()
+   protected String postorderTraverse_callBinaryNodeMethod_test()
    {
       // Now, postorder traversal but using the binaryNode.java class
       if(isEmpty())
       {
          throw new EmptyTreeException();
       }
-      root.postorderTraverse_binaryNodeMethod_test();
+      return root.postorderTraverse_binaryNodeMethod_test();
    }
 
 

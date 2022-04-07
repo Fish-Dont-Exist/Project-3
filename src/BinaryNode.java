@@ -136,6 +136,8 @@ class BinaryNode<T>
    {
       // Initialize result
       String result = "";
+      String lChild = "";
+      String rChild = "";
 
       // Recursive method performs postorder traversal of a subtree rooted at a BinaryNode object which calls the method
       if ( !this.isLeaf() )
@@ -143,13 +145,13 @@ class BinaryNode<T>
          // Process the nodes in the left subtree
          if (this.hasLeftChild())
          {
-            this.getLeftChild().postorderTraverse_binaryNodeMethod();
+            lChild = this.getLeftChild().postorderTraverse_binaryNodeMethod_test();
          }
 
          // Process the nodes in the right subtree
          if (this.hasRightChild())
          {
-            this.getRightChild().postorderTraverse_binaryNodeMethod();
+            rChild = this.getRightChild().postorderTraverse_binaryNodeMethod_test();
          }
 
          // Append to result
@@ -159,9 +161,10 @@ class BinaryNode<T>
       {
          // Append to result
          result += this.getData();
+
       }
 
-      return result;
+      return lChild + rChild + result;
    }
    
    /**-------------------------------------------------------------------- 
