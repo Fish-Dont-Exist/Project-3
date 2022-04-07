@@ -17,6 +17,82 @@ public class BinaryTree<T> implements BinaryTreeInterface<T>
       initializeTree(rootData, leftTree, rightTree);
    } // end constructor
 
+//   public  BinaryTree(String preOrder, String inOrder)
+//   {
+////		// Recursive method will call itself
+////		// 1st. Find the root in the in-order string
+//
+////
+////		// 2nd. Split the in-order and pre-order strings into left and right strings
+////
+////
+////		// 3rd. Call the method newBinaryTree on the left and right string
+//
+//
+//      // Second attempt
+////      BinaryTree<String> tree = new BinaryTree<>();
+//
+//      // Initialize the root character and index
+//      char rootChar =  preOrder.charAt(0);
+//      int rootIndex = 0;
+//
+//      // Convert the strings to an array of letters
+//      String [] splitInOrder = inOrder.split("");
+//      String [] splitPreOrder = preOrder.split("");
+//
+//      // Find the index of the root in the splitInOrder array
+//      while (!splitInOrder[rootIndex].equalsIgnoreCase(String.valueOf(rootChar)))
+//      {
+//         rootIndex ++;
+//      }
+//
+//      // Split the inOrder string into left and right strings
+//      String lInOrder = "";
+//      String rInOrder = "";
+//
+//
+//      for (int i = 0; i < rootIndex; i++)
+//      {
+//         lInOrder += splitInOrder[i];
+//
+//      }
+//
+//      for (int i = rootIndex + 1; i < splitInOrder.length; i++ )
+//      {
+//         rInOrder += splitInOrder[i];
+//      }
+//
+//
+//      // Split the preOrder string into left and right strings
+//      String lPreOrder = "";
+//      String rPreOrder = "";
+//
+//      for (int i = 1; i < rootIndex + 1; i++)
+//      {
+//         lPreOrder += splitPreOrder[i];
+//      }
+//
+//      for (int i = rootIndex + 1; i < splitPreOrder.length; i++)
+//      {
+//         rPreOrder += splitPreOrder[i];
+//      }
+//
+//
+//
+//      // Create the binary tree
+//      if (inOrder.length() == 1)  // i.e., if it is a leaf
+//      {
+//         tree.setTree(splitInOrder[rootIndex], null, null);
+//      }
+//      else // if it has children
+//      {
+//         initializeTree(splitInOrder[rootIndex], new BinaryTree(lPreOrder, lInOrder), new BinaryTree(rPreOrder, rInOrder));
+////         tree.setTree(splitInOrder[rootIndex],  new BinaryTree(lPreOrder, lInOrder), new BinaryTree(rPreOrder, rInOrder));
+//      }
+//
+////      return tree;
+//   }
+
    public void setTree(T rootData, BinaryTreeInterface<T> leftTree,
                                    BinaryTreeInterface<T> rightTree)
    {

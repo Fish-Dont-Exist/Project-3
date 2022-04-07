@@ -48,6 +48,11 @@ public class DriverBT
 		System.out.println("Done.");
 
 		// Try out extra credit work
+//		BinaryTree<String> check1 = new BinaryTree("ABDEC", "DBEAC");
+//		System.out.println("post-order: ");
+//		check1.postorderTraverse();
+
+
 		BinaryTree<String> checking =  newBinaryTree("ABDEC", "DBEAC");
 		checking.postorderTraverse();
 
