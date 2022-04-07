@@ -212,7 +212,7 @@ public class BinaryTree<T> implements BinaryTreeInterface<T>
    public String postorderTraverse_test()
    {
       // Calls postorderTraverse(BinaryNode<T> node) on root
-      return postorderTraverse(root);
+      return postorderTraverse_test(root);
    }
 
 

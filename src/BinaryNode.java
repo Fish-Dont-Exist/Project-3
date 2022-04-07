@@ -129,6 +129,40 @@ class BinaryNode<T>
          System.out.println(this.getData());
       }
    }
+
+
+   // ----- TEST METHODS FOR TASK 1 -----
+   public String postorderTraverse_binaryNodeMethod_test()
+   {
+      // Initialize result
+      String result = "";
+
+      // Recursive method performs postorder traversal of a subtree rooted at a BinaryNode object which calls the method
+      if ( !this.isLeaf() )
+      {
+         // Process the nodes in the left subtree
+         if (this.hasLeftChild())
+         {
+            this.getLeftChild().postorderTraverse_binaryNodeMethod();
+         }
+
+         // Process the nodes in the right subtree
+         if (this.hasRightChild())
+         {
+            this.getRightChild().postorderTraverse_binaryNodeMethod();
+         }
+
+         // Append to result
+         result += this.getData();
+      }
+      else
+      {
+         // Append to result
+         result += this.getData();
+      }
+
+      return result;
+   }
    
    /**-------------------------------------------------------------------- 
     * Part of Task 2*/
