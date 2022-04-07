@@ -18,6 +18,11 @@ public class BinaryTree<T> implements BinaryTreeInterface<T>
    } // end constructor
 
 
+   /**
+    * Constructor that calls the recursive private method createTree to build tree from two strings
+    * @param preOrder String of the preorder traversal
+    * @param inOrder  String of the inorder traversal
+    */
    public BinaryTree(String preOrder, String inOrder)
    {
       createTree(preOrder, inOrder);
