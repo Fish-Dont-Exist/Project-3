@@ -11,6 +11,6 @@ Jesse Chu -  Javadocs website creation & Unit Testing
 
 3.  
 Javadoc Link: https://fish-dont-exist.github.io/Project-3/BinaryTree.html  
-Video Link:   
+Video Link:   https://youtu.be/Emw8mlJTf6Y
 
 Extra Features: Completed extra, appears as a constructor in the BinaryTree class. Can pass two strings (a preorder traversal string, and an inorder traversal string) and a binary tree will be constructed.  
