@@ -207,7 +207,43 @@ public class BinaryTree<T> implements BinaryTreeInterface<T>
       }
       root.postorderTraverse_binaryNodeMethod();
    }
-   
+
+   // ------ TESTING METHODS FROM TASK 1  -------
+   public String postorderTraverse_test()
+   {
+      // Calls postorderTraverse(BinaryNode<T> node) on root
+      return postorderTraverse(root);
+   }
+
+
+   private String postorderTraverse_test(BinaryNode<T> node)
+   {
+      // Initialize result string
+      String result = "";
+
+      // recursive method performs postorder traversal of a subtree rooted at a given node
+      if (node != null)
+      {
+         postorderTraverse(node.getLeftChild());
+         postorderTraverse(node.getRightChild());
+         result += node.getData();
+      }
+      // Return result
+      return result;
+   }
+
+
+   public void postorderTraverse_callBinaryNodeMethod_test()
+   {
+      // Now, postorder traversal but using the binaryNode.java class
+      if(isEmpty())
+      {
+         throw new EmptyTreeException();
+      }
+      root.postorderTraverse_binaryNodeMethod_test();
+   }
+
+
    /** -------------------------------------------------------------------- */
    /** Task 2: Implement the 2 methods
     *     . In BinaryTree.java
