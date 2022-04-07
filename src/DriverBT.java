@@ -48,16 +48,25 @@ public class DriverBT
 		System.out.println("Done.");
 
 		// Try out extra credit work
-		BinaryTree<String> checking =  new BinaryTree<>();
-		checking.newBinaryTree("ABDEC", "DBEAC");
+		System.out.println("Starting Extra credit testing: ");
+		System.out.println("For preorder: ABC and inorder: BAC, we get postorder: ");
+		BinaryTree<String> test1 = new BinaryTree("ABC", "BAC");
+		test1.postorderTraverse();
 
+		System.out.println("\n");
+		System.out.println("For preorder: ABC and inorder: BAC, we get postorder: ");
+		BinaryTree<String> test2 = new BinaryTree("ABDEC", "DBEAC");
+		test2.postorderTraverse();
 
+		System.out.println("\n");
+		System.out.println("For preorder: ABC and inorder: BAC, we get postorder: ");
+		BinaryTree<String> test3 = new BinaryTree("ABCDE", "BADCE");
+		test3.postorderTraverse();
 
-		checking.postorderTraverse();
-
-//		System.out.println("\n");
-//		BinaryTree<String> check2 = newBinaryTree("ABC", "BAC");
-//		check2.postorderTraverse();
+		System.out.println("\n");
+		System.out.println("For preorder: ABC and inorder: BAC, we get postorder: ");
+		BinaryTree<String> test4 = new BinaryTree<>("ABDC", "DBAC");
+		test4.postorderTraverse();
 
 
 
