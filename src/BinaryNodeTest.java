@@ -72,6 +72,34 @@ public class BinaryNodeTest
     }
 
     @Test
+    public void postOrderBinaryNodeGetMiddleHeightFullTree()
+    {
+        BinaryNode<Integer> binaryNode5 = new BinaryNode<>(5, binaryNode1, binaryNode3);
+        BinaryNode<Integer> binaryNode6 = new BinaryNode<>(6, binaryNode2, binaryNode4);
+        BinaryNode<Integer> binaryNode7 = new BinaryNode<>(7, binaryNode5, binaryNode6);
+        /*                  7
+                        5       6
+                     1    3   2    4
+        */
+        int height = binaryNode5.getHeight_binaryNodeMethod();
+        assertEquals(2, height);
+    }
+
+    @Test
+    public void postOrderBinaryNodeGetHeightBottomFullTree()
+    {
+        BinaryNode<Integer> binaryNode5 = new BinaryNode<>(5, binaryNode1, binaryNode3);
+        BinaryNode<Integer> binaryNode6 = new BinaryNode<>(6, binaryNode2, binaryNode4);
+        BinaryNode<Integer> binaryNode7 = new BinaryNode<>(7, binaryNode5, binaryNode6);
+        /*                  7
+                        5       6
+                     1    3   2    4
+        */
+        int height = binaryNode1.getHeight_binaryNodeMethod();
+        assertEquals(1, height);
+    }
+
+    @Test
     public void postOrderBinaryNodeGetHeightCompleteTree()
     {
         BinaryNode<Integer> binaryNode5 = new BinaryNode<>(5, binaryNode1, binaryNode3);
@@ -83,6 +111,20 @@ public class BinaryNodeTest
         */
         int height = binaryNode7.getHeight_binaryNodeMethod();
         assertEquals(3, height);
+    }
+
+    @Test
+    public void postOrderBinaryNodeGetMiddleHeightCompleteTree()
+    {
+        BinaryNode<Integer> binaryNode5 = new BinaryNode<>(5, binaryNode1, binaryNode3);
+        BinaryNode<Integer> binaryNode6 = new BinaryNode<>(6, binaryNode2, null);
+        BinaryNode<Integer> binaryNode7 = new BinaryNode<>(7, binaryNode5, binaryNode6);
+        /*                  7
+                        5       6
+                     1    3   2
+        */
+        int height = binaryNode6.getHeight_binaryNodeMethod();
+        assertEquals(2, height);
     }
 
     @Test
@@ -98,9 +140,6 @@ public class BinaryNodeTest
         assertEquals(3, height);
     }
 
-    /*
-    Currently returns 1 instead of 0
-     */
     @Test
     public void postOrderBinaryNodeGetHeightEmptyTree()
     {
@@ -124,6 +163,34 @@ public class BinaryNodeTest
     }
 
     @Test
+    public void postOrderBinaryNodeGetMiddleNodeFullTree()
+    {
+        BinaryNode<Integer> binaryNode5 = new BinaryNode<>(5, binaryNode1, binaryNode3);
+        BinaryNode<Integer> binaryNode6 = new BinaryNode<>(6, binaryNode2, binaryNode4);
+        BinaryNode<Integer> binaryNode7 = new BinaryNode<>(7, binaryNode5, binaryNode6);
+        /*                  7
+                        5       6
+                     1    3   2    4
+        */
+        int nodes = binaryNode5.getNumberOfNodes_binaryNodeMethod();
+        assertEquals(3, nodes);
+    }
+
+    @Test
+    public void postOrderBinaryNodeGetBottomNodeFullTree()
+    {
+        BinaryNode<Integer> binaryNode5 = new BinaryNode<>(5, binaryNode1, binaryNode3);
+        BinaryNode<Integer> binaryNode6 = new BinaryNode<>(6, binaryNode2, binaryNode4);
+        BinaryNode<Integer> binaryNode7 = new BinaryNode<>(7, binaryNode5, binaryNode6);
+        /*                  7
+                        5       6
+                     1    3   2    4
+        */
+        int nodes = binaryNode1.getNumberOfNodes_binaryNodeMethod();
+        assertEquals(1, nodes);
+    }
+
+    @Test
     public void postOrderBinaryNodeGetNodeCompleteTree()
     {
         BinaryNode<Integer> binaryNode5 = new BinaryNode<>(5, binaryNode1, binaryNode3);
@@ -135,6 +202,20 @@ public class BinaryNodeTest
         */
         int nodes = binaryNode7.getNumberOfNodes_binaryNodeMethod();
         assertEquals(6, nodes);
+    }
+
+    @Test
+    public void postOrderBinaryNodeGetMiddleNodeCompleteTree()
+    {
+        BinaryNode<Integer> binaryNode5 = new BinaryNode<>(5, binaryNode1, binaryNode3);
+        BinaryNode<Integer> binaryNode6 = new BinaryNode<>(6, binaryNode2, null);
+        BinaryNode<Integer> binaryNode7 = new BinaryNode<>(7, binaryNode5, binaryNode6);
+        /*                  7
+                        5       6
+                     1    3   2
+        */
+        int nodes = binaryNode6.getNumberOfNodes_binaryNodeMethod();
+        assertEquals(2, nodes);
     }
 
     @Test
@@ -150,9 +231,6 @@ public class BinaryNodeTest
         assertEquals(4, nodes);
     }
 
-    /*
-    Currently returns 1 instead of 0
-     */
     @Test
     public void postOrderBinaryNodeGetNodeEmptyTree()
     {

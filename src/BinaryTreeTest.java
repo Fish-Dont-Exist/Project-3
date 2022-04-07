@@ -173,6 +173,40 @@ public class BinaryTreeTest {
     }
 
     @Test
+    public void postOrderBinaryTreeGetMiddleHeightFullTree() {
+        BinaryTree<Integer> binaryTree1 = new BinaryTree<>(1);
+        BinaryTree<Integer> binaryTree2 = new BinaryTree<>(2);
+        BinaryTree<Integer> binaryTree3 = new BinaryTree<>(3);
+        BinaryTree<Integer> binaryTree4 = new BinaryTree<>(4);
+        BinaryTree<Integer> binaryTree5 = new BinaryTree<>(5, binaryTree1, binaryTree3);
+        BinaryTree<Integer> binaryTree6 = new BinaryTree<>(6, binaryTree2, binaryTree4);
+        BinaryTree<Integer> binaryTree7 = new BinaryTree<>(7, binaryTree5, binaryTree6);
+        /*                  7
+                        5       6
+                     1    3   2    4
+        */
+        int height = binaryTree5.getHeight_callBinaryNodeMethod();
+        assertEquals(2, height);
+    }
+
+    @Test
+    public void postOrderBinaryTreeGetBottomHeightFullTree() {
+        BinaryTree<Integer> binaryTree1 = new BinaryTree<>(1);
+        BinaryTree<Integer> binaryTree2 = new BinaryTree<>(2);
+        BinaryTree<Integer> binaryTree3 = new BinaryTree<>(3);
+        BinaryTree<Integer> binaryTree4 = new BinaryTree<>(4);
+        BinaryTree<Integer> binaryTree5 = new BinaryTree<>(5, binaryTree1, binaryTree3);
+        BinaryTree<Integer> binaryTree6 = new BinaryTree<>(6, binaryTree2, binaryTree4);
+        BinaryTree<Integer> binaryTree7 = new BinaryTree<>(7, binaryTree5, binaryTree6);
+        /*                  7
+                        5       6
+                     1    3   2    4
+        */
+        int height = binaryTree1.getHeight_callBinaryNodeMethod();
+        assertEquals(1, height);
+    }
+
+    @Test
     public void postOrderBinaryTreeGetHeightCompleteTree() {
         BinaryTree<Integer> binaryTree1 = new BinaryTree<>(1);
         BinaryTree<Integer> binaryTree2 = new BinaryTree<>(2);
@@ -188,6 +222,21 @@ public class BinaryTreeTest {
         assertEquals(3, height);
     }
 
+    @Test
+    public void postOrderBinaryTreeGetMiddleHeightCompleteTree() {
+        BinaryTree<Integer> binaryTree1 = new BinaryTree<>(1);
+        BinaryTree<Integer> binaryTree2 = new BinaryTree<>(2);
+        BinaryTree<Integer> binaryTree3 = new BinaryTree<>(3);
+        BinaryTree<Integer> binaryTree5 = new BinaryTree<>(5, binaryTree1, binaryTree3);
+        BinaryTree<Integer> binaryTree6 = new BinaryTree<>(6, binaryTree2, null);
+        BinaryTree<Integer> binaryTree7 = new BinaryTree<>(7, binaryTree5, binaryTree6);
+        /*                  7
+                        5       6
+                     1    3   2
+        */
+        int height = binaryTree6.getHeight_callBinaryNodeMethod();
+        assertEquals(2, height);
+    }
 
     @Test
     public void postOrderBinaryTreeGetHeightNonBalancedTree() {
@@ -242,6 +291,40 @@ public class BinaryTreeTest {
     }
 
     @Test
+    public void postOrderBinaryTreeGetMiddleNodesFullTree() {
+        BinaryTree<Integer> binaryTree1 = new BinaryTree<>(1);
+        BinaryTree<Integer> binaryTree2 = new BinaryTree<>(2);
+        BinaryTree<Integer> binaryTree3 = new BinaryTree<>(3);
+        BinaryTree<Integer> binaryTree4 = new BinaryTree<>(4);
+        BinaryTree<Integer> binaryTree5 = new BinaryTree<>(5, binaryTree1, binaryTree3);
+        BinaryTree<Integer> binaryTree6 = new BinaryTree<>(6, binaryTree2, binaryTree4);
+        BinaryTree<Integer> binaryTree7 = new BinaryTree<>(7, binaryTree5, binaryTree6);
+        /*                  7
+                        5       6
+                     1    3   2    4
+        */
+        int nodes = binaryTree5.getNumberOfNodes();
+        assertEquals(3, nodes);
+    }
+
+    @Test
+    public void postOrderBinaryTreeGetBottomNodesFullTree() {
+        BinaryTree<Integer> binaryTree1 = new BinaryTree<>(1);
+        BinaryTree<Integer> binaryTree2 = new BinaryTree<>(2);
+        BinaryTree<Integer> binaryTree3 = new BinaryTree<>(3);
+        BinaryTree<Integer> binaryTree4 = new BinaryTree<>(4);
+        BinaryTree<Integer> binaryTree5 = new BinaryTree<>(5, binaryTree1, binaryTree3);
+        BinaryTree<Integer> binaryTree6 = new BinaryTree<>(6, binaryTree2, binaryTree4);
+        BinaryTree<Integer> binaryTree7 = new BinaryTree<>(7, binaryTree5, binaryTree6);
+        /*                  7
+                        5       6
+                     1    3   2    4
+        */
+        int nodes = binaryTree1.getNumberOfNodes();
+        assertEquals(1, nodes);
+    }
+
+    @Test
     public void postOrderBinaryTreeGetNodesCompleteTree() {
         BinaryTree<Integer> binaryTree1 = new BinaryTree<>(1);
         BinaryTree<Integer> binaryTree2 = new BinaryTree<>(2);
@@ -255,6 +338,22 @@ public class BinaryTreeTest {
         */
         int nodes = binaryTree7.getNumberOfNodes();
         assertEquals(6, nodes);
+    }
+
+    @Test
+    public void postOrderBinaryTreeGetMiddleNodesCompleteTree() {
+        BinaryTree<Integer> binaryTree1 = new BinaryTree<>(1);
+        BinaryTree<Integer> binaryTree2 = new BinaryTree<>(2);
+        BinaryTree<Integer> binaryTree3 = new BinaryTree<>(3);
+        BinaryTree<Integer> binaryTree5 = new BinaryTree<>(5, binaryTree1, binaryTree3);
+        BinaryTree<Integer> binaryTree6 = new BinaryTree<>(6, binaryTree2, null);
+        BinaryTree<Integer> binaryTree7 = new BinaryTree<>(7, binaryTree5, binaryTree6);
+        /*                  7
+                        5       6
+                     1    3   2
+        */
+        int nodes = binaryTree6.getNumberOfNodes();
+        assertEquals(2, nodes);
     }
 
     @Test
@@ -296,6 +395,40 @@ public class BinaryTreeTest {
     }
 
     @Test
+    public void postOrderBinaryTreeWithBinaryNodeMethodGetMiddleNodesFullTree() {
+        BinaryTree<Integer> binaryTree1 = new BinaryTree<>(1);
+        BinaryTree<Integer> binaryTree2 = new BinaryTree<>(2);
+        BinaryTree<Integer> binaryTree3 = new BinaryTree<>(3);
+        BinaryTree<Integer> binaryTree4 = new BinaryTree<>(4);
+        BinaryTree<Integer> binaryTree5 = new BinaryTree<>(5, binaryTree1, binaryTree3);
+        BinaryTree<Integer> binaryTree6 = new BinaryTree<>(6, binaryTree2, binaryTree4);
+        BinaryTree<Integer> binaryTree7 = new BinaryTree<>(7, binaryTree5, binaryTree6);
+        /*                  7
+                        5       6
+                     1    3   2    4
+        */
+        int nodes = binaryTree5.getNumberOfNodes_callBinaryNodeMethod();
+        assertEquals(3, nodes);
+    }
+
+    @Test
+    public void postOrderBinaryTreeWithBinaryNodeMethodGetBottomNodesFullTree() {
+        BinaryTree<Integer> binaryTree1 = new BinaryTree<>(1);
+        BinaryTree<Integer> binaryTree2 = new BinaryTree<>(2);
+        BinaryTree<Integer> binaryTree3 = new BinaryTree<>(3);
+        BinaryTree<Integer> binaryTree4 = new BinaryTree<>(4);
+        BinaryTree<Integer> binaryTree5 = new BinaryTree<>(5, binaryTree1, binaryTree3);
+        BinaryTree<Integer> binaryTree6 = new BinaryTree<>(6, binaryTree2, binaryTree4);
+        BinaryTree<Integer> binaryTree7 = new BinaryTree<>(7, binaryTree5, binaryTree6);
+        /*                  7
+                        5       6
+                     1    3   2    4
+        */
+        int nodes = binaryTree1.getNumberOfNodes_callBinaryNodeMethod();
+        assertEquals(1, nodes);
+    }
+
+    @Test
     public void postOrderBinaryTreeWithBinaryNodeMethodGetNodesCompleteTree() {
         BinaryTree<Integer> binaryTree1 = new BinaryTree<>(1);
         BinaryTree<Integer> binaryTree2 = new BinaryTree<>(2);
@@ -309,6 +442,22 @@ public class BinaryTreeTest {
         */
         int nodes = binaryTree7.getNumberOfNodes_callBinaryNodeMethod();
         assertEquals(6, nodes);
+    }
+
+    @Test
+    public void postOrderBinaryTreeWithBinaryNodeMethodGetMiddleNodesCompleteTree() {
+        BinaryTree<Integer> binaryTree1 = new BinaryTree<>(1);
+        BinaryTree<Integer> binaryTree2 = new BinaryTree<>(2);
+        BinaryTree<Integer> binaryTree3 = new BinaryTree<>(3);
+        BinaryTree<Integer> binaryTree5 = new BinaryTree<>(5, binaryTree1, binaryTree3);
+        BinaryTree<Integer> binaryTree6 = new BinaryTree<>(6, binaryTree2, null);
+        BinaryTree<Integer> binaryTree7 = new BinaryTree<>(7, binaryTree5, binaryTree6);
+        /*                  7
+                        5       6
+                     1    3   2
+        */
+        int nodes = binaryTree6.getNumberOfNodes_callBinaryNodeMethod();
+        assertEquals(2, nodes);
     }
 
     @Test
