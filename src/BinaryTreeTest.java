@@ -18,7 +18,12 @@ public class BinaryTreeTest
                         5       6
                      1    3   2    4
         */
-        binaryTree7.postorderTraverse();
+
+        // Create string of postorder traversal
+        String postString = binaryTree7.postorderTraverse_test();
+
+        // Assert the equals
+        assertEquals("1352467", postString);
         // Output should be 1, 3, 5, 2, 4, 6, 7
     }
 
